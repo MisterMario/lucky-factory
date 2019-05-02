@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Luc Factory</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="desription" content="test php page" />
+		<meta name="keywords" content="test page, test, php, page" />
+		<meta name="developer" content="Mr.Mario">
+		<link rel="stylesheet" type="text/css" href="<?=$way_style?>styles/styles.css" media="screen" />
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>
+					Luc <span>ку!</span><br />
+					Factory
+				</h1>
+				<!--Тут будет распологаться описание сайта-->
+				<?=$login_form?>
+			</div>
+			<!--Блок topmenu-->
+			<div id="topmenu">
+				<?=$topmenu?>
+			</div>
+			<!--Конец topmenu-->
+			<?=$message?>
+			<!--Блок контента-->
+			<div id="content">
+				<div id="inside_content">
+					<?=$page_name?>
+					<?=$content?>
+				</div>
+			</div><!--Конец контента-->
+			<!--Блок подвал-->
+			<div id="footer">
+				<p>Все права защищены. &#169; 2017 lucfactory.com</p>
+			</div><!--Конец подвала-->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,22 @@
+<div class="nav_bar">
+	<div class="page_select">
+		<form method="post" action="" id="current_page">
+			<div class="hidden_input">
+				<input type="hidden" id="current_page_content" name="content" value="" />
+				<button type="submit" id="hidden_submit">Выбрать</button>
+			</div>
+		</form>
+		<p>Выбор страницы:<span>
+		<select name="selected_number" onchange="HiddenLoad('news');" form="current_page">
+			<?=$select_options?>
+		</select>
+		</span></p>
+	</div>
+	<div class="search_bar">
+		<form method="post" action="">
+			<label for="search_post"><?=$search_label?></label>
+			<input type="text" name="search" value="<?=$_POST["search"]?>" />
+			<button type="submit">Поиск</button>
+		</form>
+	</div>
+</div>

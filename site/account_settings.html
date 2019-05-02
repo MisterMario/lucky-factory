@@ -1,0 +1,67 @@
+<div id="account_section">
+	<?=$account_page_name?>
+	<div id="profile_settings">
+		<div class="avatar_change">
+			<div class="profile_avatar">
+				<img src="<?=$user->getAvatar()?>" alt="profile avatar" />
+			</div>
+			<form method="post" action="" enctype="multipart/form-data">
+				<div class="hidden_input">
+					<input type="file" accept="image/jpeg,image/png,image/gif" id="hidden_file" name="file" onchange="HiddenLoad();" />
+					<input type="submit" id="hidden_submit" name="avatar_load" value="Загрузить" />
+				</div>
+				<button type="button" name="avatar_upload" onclick="FindFile();">Загрузить</button>
+			</form>
+		</div>
+		<div class="profile_info">
+			<div class="info_block">
+				<div class="inside_info_block">
+					<p>Смена е-mail</p>
+					<form method="post" action="">
+						<div class="input_rows">
+							<div class="input_row">
+								<label for="email_change">Новый e-mail:</label>
+								<input type="text" name="email_change" />
+							</div>
+						</div>
+						<button type="submit">OK</button>
+					</form>
+				</div>
+			</div>
+			<div class="info_block">
+				<div class="inside_info_block">
+					<p>Смена пароля</p>
+					<form method="post" action="">
+						<div class="input_rows">
+							<div class="input_row">
+								<label for="password_change">Новый пароль:</label>
+								<input type="password" name="password_change" />
+							</div>
+							<div class="input_row">
+								<label for="password_change_repeat">Повтор пароля:</label>
+								<input type="password" name="password_change_repeat"/>
+							</div>
+						</div>
+						<button type="submit">ОК</button>
+					</form>
+				</div>
+			</div>
+			<div class="info_block">
+				<div class="inside_info_block">
+					<p>Ввод промо-кода</p>
+					<form method="post" action="">
+						<div class="input_rows">
+							<div class="input_row">
+								<label for="promo_enter">Промо-код:</label>
+								<input type="text" name="promo_enter" />
+							</div>
+						</div>
+						<button type="submit">OK</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="<?=$way_js_scripts?>uploader.js"></script>

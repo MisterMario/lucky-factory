@@ -1,0 +1,22 @@
+<div id="login_form">
+	<form method="post" action="">
+		<div class="login_row">
+			<label for="login_name">Логин: </label>
+			<input type="text" id="login_name" name="login_name" value="<?=$_POST["login_name"]?>" />
+		</div>
+		<div class="login_row">
+			<label for="login_password">Пароль: </label>
+			<input type="password" id="login_password" name="login_password" />
+		</div>
+		<div class="login_row">
+			<input type="submit" value="Войти" />
+		</div>
+		<div class="text">
+			<span>
+				<a href="/registration/">Еще не зарегистрированы?</a>
+				/
+				<a href="#">Забыли пароль?</a>
+			</span>
+		</div>
+	</form>
+</div>

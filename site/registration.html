@@ -1,0 +1,32 @@
+<p>
+	Luc Factory - это новая игра с выводом денег, которая позволяет с легкостью зарабатывать, причем, не проводя много времени за
+	компьютером. Здесь все достаточно просто. Инвестор регистрируется, пополняет игровой счет удобным ему способом и уже через несколько
+	минут начинает получать прибыль, которую легко вывести из игры на реальный счет электронных денег или на банковский счет.
+</p>
+<div id="registration">
+	<form method="post" action="">
+		<div class="input_row">
+			<label for="registration_name">Логин: </label>
+			<input type="text" name="registration_name" value="<?=$_POST["registration_name"]?>" />
+		</div>
+		<div class="input_row">
+			<label for="registration_password">Пароль: </label>
+			<input type="password" name="registration_password" />
+		</div>
+		<div class="input_row">
+			<label for="registration_password_repeat">Повтор пароля: </label>
+			<input type="password" name="registration_password_repeat" />
+		</div>
+		<div class="input_row">
+			<label for="registration_email">E-mail: </label>
+			<input type="text" name="registration_email" value="<?=$_POST["registration_email"]?>" />
+		</div>
+		<div class="input_row">
+			<label>Потдверждаю, что ознакомлен(а) с правилами проекта и принимаю их.</label>
+			<input type="checkbox" name="registration_check_rules">
+		</div>
+		<div class="input_row">
+			<button type="submit">Регистрация</button>
+		</div>
+	</form>
+</div>

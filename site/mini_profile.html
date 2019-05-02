@@ -1,0 +1,14 @@
+<div id="login_form">
+	<div class="avatar">
+		<img src="<?=$user->getAvatar()?>" alt="avatar" />
+	</div>
+	<div class="mini_profile">
+		<p class="username"><?=$user->getName()?></p>
+		<p>Баланс: <?=$user->getMoney()?> чат.</p>
+	</div>
+	<div class="exit_profile">
+		<form method="post" action="">
+			<button name="logout"></button>
+		</form>
+	</div>
+</div>

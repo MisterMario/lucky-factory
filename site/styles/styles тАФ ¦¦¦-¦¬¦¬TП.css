@@ -1,0 +1,697 @@
+/* 
+	Styles by Mr.Mario 
+	Все размеры в верстке четко подогнаны и просчитаны. Так, что не удивляться числам вроде 76.554
+*/
+
+@import url('reset.css');
+
+
+/* Верстка под Dekstop */
+@media only screen and (min-width: 800px) and (min-device-height: 600px){
+	html {
+		overflow-y: scroll;
+	}
+	body {
+		background: #9b8e7d url('../images/background.jpg') top center fixed no-repeat;
+		background-size: 100%;
+	}
+	#container {
+		width: 960px;
+		margin: 0 auto;
+		background: rgba(217, 222, 227, 0.5);
+		border: 2px solid #d9dee3;
+	}
+	#container #header {
+		display: block;
+		width: 100%;
+		height: 95px;
+	}
+	#container #header h1 {
+		float: left;
+		color: #f86829;
+		font-size: 36px;
+		font-family: Georgia, Sans-serif;
+		text-shadow: -2px -2px 3px rgba(248, 165, 128, 0.4), 2px 2px 3px rgba(248, 165, 128, 0.4);
+		padding: 7px 0px 0px 30px;
+	}
+	#container #header h1 span {
+		color: #688597;
+		font-style: italic;
+		font-family: Comic Sans MS;
+		text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+	}
+	/* Форма авторизации: мини-профиль */
+	#container #header #login_form {
+		background: #fbfbff;
+		display: block;
+		float: right;
+		position: relative;
+		margin: 15px 0px 0px 0px;
+		border: 2px solid #d9dee3;
+		border-right: none;
+		border-radius: 0.6em 0.0em 0.0em 0.6em;
+	}
+	#container #header #login_form .login_row {
+		float: left;
+		padding: 8px 5px;
+	}
+	#container #header #login_form label {
+		color: #1a1d18;
+		font-size: 15px;
+		float: left;
+		font-family: Arial, Sans-serif;
+		padding: 2px 0px;
+	}
+	#container #header #login_form input[type="text"], #container #header #login_form input[type="password"] {
+		width: 80px;
+		background: #bdccdc;
+		border: none;
+		outline: none;
+		padding: 2px 7px 2px 7px;
+		border-radius: 0.6em 0.6em 0.6em 0.6em;
+	}
+	#container #header #login_form input[type="submit"] {
+		width: 80px;
+		background: #bdccdc;
+		border: none;
+		outline: none;
+		padding: 2px 7px 2px 7px;
+		border-radius: 0.6em 0.6em 0.6em 0.6em;
+		cursor: pointer;
+	}
+	#container #header #login_form .text {
+		clear: left;
+		padding: 0px 0px 8px 5px;
+	}
+	#container #header #login_form .text span {
+		color: #688597;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+	}
+	#container #header #login_form .text a:link, #container #header #login_form .text a:visited, 
+	#container #header #login_form .text a:active {
+		color: #6991b9;
+		text-decoration: none;
+	}
+	#container #header #login_form .text a:hover {
+		text-decoration: underline;
+	}
+	#container #header #login_form .avatar {
+		display: block;
+		width: 43px;
+		height: 43px;
+		float: left;
+		background: #9b8e7d;
+		border-radius: 0.6em  0.6em;
+		margin: 8px 5px;
+	}
+	#container #header #login_form .avatar img {
+		width: 100%;
+		height: 100%;
+		border-radius: 0.6em  0.6em;
+	}
+	#container #header #login_form .mini_profile {
+		display: block;
+		float: left;
+		margin: 8px 5px;
+	}
+	#container #header #login_form .mini_profile p {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		line-height: 1.3;
+	}
+	#container #header #login_form .mini_profile p.username {
+		color: #6991b9;
+		font-weight: bold;
+	}
+	#container #header #login_form .exit_profile {
+		display: block;
+		float: left;
+		margin: 8px 5px;
+	}
+	#container #header #login_form .exit_profile button {
+		width: 38px;
+		height: 43px;
+		outline: none;
+		border-radius: 0.6em;
+		border: 2px solid #d9dee3;
+		background: #bdccdc url('../images/exit_button_off.png') center no-repeat;
+	}
+	#container #header #login_form .exit_profile button:hover {
+		color: #1a1d18;
+		cursor: pointer;
+		background: #fbfbff url('../images/exit_button_on.png') center no-repeat;
+	}
+	#container #topmenu {
+		background: #fbfbff;
+		display: block;
+		margin: 0px 15px 0px 15px;
+		border: 2px solid #d9dee3;
+	}
+	#container #topmenu ul {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	#container #topmenu ul li {
+		display: inline;
+	}
+	#container #topmenu ul li:first-child {
+		padding-left: 25px;
+	}
+	#container #topmenu ul li a:link, #container #topmenu ul li a:active, #container #topmenu ul li a:visited {
+		color: #6991b9;
+		font-size: 14px;
+		font-family: Tahoma, Sans-serif;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 10px 25px 10px 25px;
+	}
+	#container #topmenu ul li a:hover {
+		color: #fbfbff;
+		background: #d9dee3;
+	}
+	#container #message {
+		display: block;
+		overflow: hidden;
+		background: #fbfbff;
+		margin: 5px 15px 0px 15px;
+		border: 2px solid #d9dee3;
+	}
+	#container #message p {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		padding: 5px 0px;
+		text-align: center;
+	}
+	#container #content {
+		display: block;
+		background: #fbfbff;
+		border: 2px solid #d9dee3;
+		margin: 5px 15px 0px 15px;
+		overflow: hidden;
+	}
+	/* Общие стили (для всех страниц) */
+	#container #content #inside_content {
+		margin: 25px 15px 25px 15px;
+		overflow: hidden;
+	}
+	#container #content #inside_content h1.page_name {
+		color: #1a1d18;
+		font-size: 18px;
+		font-family: Tahoma;
+	}
+	#container #content #inside_content img {
+		max-width: 100%;
+	}
+	#container #content #inside_content button {
+		color: #fbfbff;
+		background: #bdccdc;
+		outline: none;
+		border: 2px solid #d9dee3;
+		border-radius: 0.6em 0.6em 0.6em 0.6em;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		padding: 7px 16.07px;
+	}
+	#container #content #inside_content button:hover {
+		color: #1a1d18;
+		background: #fbfbff;
+		cursor: pointer;
+	}
+	#container #content #inside_content p {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		padding-top: 25px;
+		line-height: 1.3;
+	}
+	#container #content #inside_content p.message {
+		font-weight: bold;
+		text-align: center;
+	}
+	#container #content #inside_content p.center {
+		text-align: center;
+	}
+	#container #content #inside_content #table {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+		clear: both;
+	}
+	#container #content #inside_content #table p.table_name {
+		padding: 0px 0px 20px 0px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#container #content #inside_content #table table {
+		width: 100%;
+		text-align: center;
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		line-height: 1.3;
+	}
+	#container #content #inside_content #table table tr:first-child {
+		background: #6991b9;
+	}
+	#container #content #inside_content #table table td {
+		padding: 3px 0px;
+	}
+	#container #content #inside_content input[type="text"],
+	#container #content #inside_content input[type="password"]	{
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+	}
+	#container #content #inside_content .input_row {
+		display: block;
+		overflow: hidden;
+		margin-top: 7px;
+	}
+	#container #content #inside_content .input_row label {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		float: left;
+		clear: right;
+		padding: 7px 0px;
+	}
+	#container #content #inside_content .input_row input[type="text"],
+	#container #content #inside_content .input_row input[type="password"]	{
+		float: right;
+		margin-right: 50%;
+		width: 250px;
+		height: 25px;
+		outline: none;
+		padding: 2px 7px;
+		border: 2px solid #d9dee3;
+		border-radius: 0.6em 0.6em 0.6em 0.6em;
+	}
+	/* Стили для новстных страниц */
+	#container #content #inside_content #news_post {
+		display: block;
+		width: 100%;
+		margin-top: 25px;
+		overflow: hidden;
+	}
+	#container #content #inside_content #news_post .post_name {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	#container #content #inside_content #news_post .post_name h2 {
+		color: #1a1d18;
+		font-size: 16px;
+		font-family: Arial, Sans-serif;
+		line-height: 1.3;
+		font-weight: bold;
+	}
+	#container #content #inside_content #news_post .post_name h2.name {
+		float: left;
+		text-align: left;
+	}
+	#container #content #inside_content #news_post .post_name h2.name a:link,
+	#container #content #inside_content #news_post .post_name h2.name a:active,
+	#container #content #inside_content #news_post .post_name h2.name a:visited,
+	#container #content #inside_content #news_post .post_name h2.name a:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+	#container #content #inside_content #news_post .post_name h2.date {
+		float: right;
+	}
+	#container #content #inside_content #news_post .post_content {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 15px;
+	}
+	#container #content #inside_content #news_post .post_content p {
+		clear: both;
+		padding: 0px;
+		text-align: justify;
+	}
+	#container #content #inside_content #news_post .post_content a.read_more:link,
+	#container #content #inside_content #news_post .post_content a.read_more:active,
+	#container #content #inside_content #news_post .post_content a.read_more:visited {
+		float: right;
+		color: #6991b9;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		text-decoration: none;
+	}
+	#container #content #inside_content #news_post .post_content a.read_more:hover {
+		text-decoration: underline;
+	}
+	#container #content #inside_content #page_numbers {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 25px;
+	}
+	#container #content #inside_content #page_numbers ul {
+		text-align: center;
+	}
+	#container #content #inside_content #page_numbers ul li {
+		display: inline-block;
+		padding: 5px 0px;
+		border: 2px solid #d9dee3;
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+	}
+	#container #content #inside_content #page_numbers ul li a:link,
+	#container #content #inside_content #page_numbers ul li a:active,
+	#container #content #inside_content #page_numbers ul li a:visited {
+		color: #6991b9;
+		text-decoration: none;
+		padding: 5px 10px;
+	}
+	#container #content #inside_content #page_numbers ul li a:hover {
+		background: #d9dee3;
+	}
+	#container #content #inside_content #page_numbers ul li span {
+		color: #6991b9;
+		text-decoration: none;
+		padding: 5px 10px;
+	}
+	#container #content #inside_content #page_numbers ul li span.select {
+		opacity: 0.7;
+	}
+	/* Стили для новостной страницы содержащей пост */
+	#container #content #inside_content #news_post_page {
+		display: block;
+		width: 100%;
+		margin-top: 25px;
+	}
+	#container #content #inside_content #news_post_page .post_name {
+		display: block;
+		width: 100%;
+	}
+	#container #content #inside_content #news_post_page .post_name h2 {
+		color: #1a1d18;
+		font-size: 16px;
+		font-family: Arial, Sans-serif;
+		line-height: 1.3;
+		font-weight: bold;
+	}
+	#container #content #inside_content #news_post_page .post_content {
+		display: block;
+		width: 100%;
+		margin-top: 25px;
+		overflow: hidden;
+	}
+	#container #content #inside_content #news_post_page .post_content p {
+		padding-top: 15px;
+	}
+	#container #content #inside_content #news_post_page .post_content p:first-child {
+		padding-top: 0px;
+	}
+	#container #content #inside_content #news_post_page .post_info {
+		display: block;
+		width: 100%;
+		margin-top: 15px;
+	}
+	#container #content #inside_content #news_post_page .post_info p {
+		padding-top: 0px;
+	}
+	#container #content #inside_content #news_post_page .post_info p.author {
+		float: left;
+	}
+	#container #content #inside_content #news_post_page .post_info p.date {
+		float: right;
+	}
+	/* Стили для страницы рейтинга */
+	#container #content #inside_content #table table tr td.top_position {
+		width: 15%;
+	}
+	/* Стили для личного кабинета */
+	#container #content #inside_content #account_menu {
+		float: left;
+		display: block;
+		width: 200px;
+	}
+	#container #content #inside_content #account_menu ul li {
+		margin: 3px 0px;
+	}
+	#container #content #inside_content #account_menu ul li:first-child {
+		margin: 0px;
+	}
+	#container #content #inside_content #account_menu ul li:last-child {
+		margin: 0px;
+	}
+	#container #content #inside_content #account_menu a:link, #container #content #inside_content #account_menu a:visited,
+	#container #content #inside_content #account_menu a:active{
+		width: 95%;
+		background: #d9dee3;
+		text-decoration: none;
+		padding: 10px;
+		padding-right: 0px;
+		display: block;
+		color: #6991b9;
+		font-size: 14px;
+		font-family: Tahoma, Sans-serif;
+		font-weight: bold;
+	}
+	#container #content #inside_content #account_menu a:hover {
+		color: #fbfbff;
+		background: #8ebfef;
+	}
+	#container #content #inside_content #account_section {
+		display: block;
+		float: left;
+		width: 76.563%;
+		margin-left: 10px;
+	}
+	/* Секция: общая статистика */
+	#container #content #inside_content #account_section #profile_statistics,
+	#container #content #inside_content #account_section #profile_settings {
+		display: block;
+		margin-top: 25px;
+		overflow: hidden;
+	}
+	#container #content #inside_content #account_section .profile_avatar {
+		display: block;
+		background: #9b8e7d;
+		float: left;
+		width: 200px;
+		height: 200px;
+	}
+	#container #content #inside_content #account_section .profile_avatar img {
+		width: 100%;
+		height: 100%;
+	}
+	#container #content #inside_content #account_section .profile_info {
+		display: block;
+		float: left;
+		margin-left: 15px;
+	}
+	#container #content #inside_content #account_section .profile_info p {
+		padding-top: 0px;
+		line-height: 1.6;
+		text-align: left;
+	}
+	#container #content #inside_content #account_section .profile_info p span {
+		font-weight: bold;
+		padding-right: 3px;
+	}
+	/* Секция: машинное отделение */
+	#container #content #inside_content #account_section #pump {
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;
+		width: 560px;
+		padding: 40px 0px 0px 0px;
+	}
+	#container #content #inside_content #account_section #pump .pump_image {
+		width: 220px;
+		height: 160px;
+		float: left;
+		display: block;
+	}
+	#container #content #inside_content #account_section #pump .pump_description {
+		float: left;
+		padding: 5px 0px 0px 30px;
+		display: block;
+	}
+	#container #content #inside_content #account_section #pump .pump_image img {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	#container #content #inside_content #account_section #pump .pump_description h2 {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		font-weight: bold;
+		line-height: 1.3;
+	}
+	#container #content #inside_content #account_section #pump .pump_description p {
+		padding-top: 10px;
+	}
+	#container #content #inside_content #account_section #pump .pump_description button {
+		margin-top: 10px;
+	}
+	/* Секция: фабрика, луцеколонка */
+	#container #content #inside_content #account_section #section_description {
+		display: block;
+		padding-top: 25px;
+		width: 100%;
+		overflow: hidden;
+	}
+	#container #content #inside_content #account_section #section_description .image {
+		display: block;
+		width: 42%;
+		height: 100%;
+		float: left;
+	}
+	#container #content #inside_content #account_section #section_description .image img {
+		width: 100%;
+		height: 100%;
+	}
+	#container #content #inside_content #account_section #section_description  .description {
+		display: block;
+		float: left;
+		width: 58%;
+	}
+	#container #content #inside_content #account_section #section_description  .description p {
+		padding: 0px 0px 0px 15px;
+	}
+	#container #content #inside_content #account_section #button_block {
+		display: block;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		margin-top: 25px;
+	}
+	#container #content #inside_content #account_section #button_block button {
+		float: right;
+	}
+	/* Секция: фабрика */
+	#container #content #inside_content #account_section #tank {
+		display: block;
+		width: 32%;
+		height: 190px;
+		float: left;
+		overflow: hidden;
+		margin: 40px 0.5% 0px 0.5%;
+	}
+	#container #content #inside_content #account_section #tank .image {
+		height: 120px;
+	}
+	#container #content #inside_content #account_section #tank .image img {
+		display: block;
+		margin: 0 auto;
+		width: 74%;
+		height: 100%;
+	}
+	#container #content #inside_content #account_section #tank .description p {
+		text-align: center;
+		padding-top: 10px;
+	}
+	/* Секция: луцеколонка */
+	#container #content #inside_content #account_section #market_table {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 40px;
+	}
+	#container #content #inside_content #account_section #market_table table {
+		color: #1a1d18;
+		font-size: 15px;
+		font-family: Arial, Sans-serif;
+		line-height: 1.3;
+		width: 100%;
+	}
+	#container #content #inside_content #account_section #market_table table tr:first-child {
+		font-weight: bold;
+	}
+	#container #content #inside_content #account_section #market_table table td {
+		width: 33%;
+		text-align: left;
+		padding: 3px 0px;
+	}
+	/* Секция: ежедневный бонус, лотерея */
+	/* Секция: лотерея */
+	#container #content #inside_content #account_section #table table td.bilet_num {
+		width: 25%;
+	}
+	#container #content #inside_content #account_section #table table td.user {
+		width: 45%;
+	}
+	/* Страница настроек профиля */
+	#container #content #inside_content #account_section #profile_settings .avatar_change {
+		float: left;
+		display: block;
+		width: 200px;
+		overflow: hidden;
+	}
+	#container #content #inside_content #account_section #profile_settings .avatar_change .profile_avatar {
+		border-radius: 0.6em 0.6em 0em 0em;
+	}
+	#container #content #inside_content #account_section #profile_settings .avatar_change .profile_avatar img {
+		border-radius: 0.6em 0.6em 0em 0em;
+	}
+	#container #content #inside_content #account_section #profile_settings .avatar_change .hidden_input {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		width: 0px;
+		height: 0px;
+	}
+	#container #content #inside_content #account_section #profile_settings .avatar_change button {
+		width: 100%;
+		border-radius: 0em 0em 0.6em 0.6em;
+	}
+	#container #content #inside_content #account_section #profile_settings .info_block {
+		margin-top: 30px;
+		display: block;
+		border: 2px solid #d9dee3;
+		border-radius: 0.6em 0.6em;
+	}
+	#container #content #inside_content #account_section #profile_settings .info_block .inside_info_block {
+		display: block;
+		padding: 7px;
+	}
+	#container #content #inside_content #account_section #profile_settings .info_block:first-child {
+		margin-top: 0px;
+	}
+	#container #content #inside_content #account_section #profile_settings .info_block .inside_info_block .input_rows {
+		padding-bottom: 17px;
+	}
+	#container #content #inside_content #account_section #profile_settings .inside_info_block .input_rows .input_row input[type="text"],
+	#container #content #inside_content #account_section #profile_settings .inside_info_block .input_rows .input_row input[type="password"]{
+		margin-right: 0%;
+	}
+	#container #content #inside_content #account_section #profile_settings .info_block .inside_info_block button[type="submit"]{
+		float: right;
+		margin-top: -10px
+	}
+	
+	/* Стили для страницы регистрации */
+	#container #content #inside_content #registration {
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		margin-top: 25px;
+	}
+	#container #content #inside_content .input_row input[type="checkbox"] {
+		float: left;
+		width: 15px;
+		height: 25px;
+		margin: 0px 0px 0px 5px;
+	}
+	/* Стили для подвала */
+	#container #footer {
+		display: block;
+		margin: 15px 15px 15px 15px;
+	}
+	#container #footer p {
+		color: #3e3732;
+		text-align: center;
+		font-size: 14px;
+		font-family: Arial, Sans-serif;
+	}
+}

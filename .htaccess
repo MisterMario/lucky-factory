@@ -1,0 +1,14 @@
+﻿AddDefaultCharset UTF-8
+RewriteEngine on
+
+# запрет вывода содержания каталога, при обращениии к нему
+Options -Indexes
+
+# перенаправление на индексную страницу
+Options +FollowSymlinks
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*) /?%{QUERY_STRING}
+
+# установка индексной страницы
+DirectoryIndex index.php

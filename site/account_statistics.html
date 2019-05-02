@@ -1,0 +1,29 @@
+<div id="account_section">
+	<?=$account_page_name?>
+	<div id="profile_statistics">
+		<div class="profile_avatar">
+			<img src="<?=$user->getAvatar()?>" alt="profile avatar" />
+		</div>
+		<div class="profile_info">
+			<p>
+				<span>ID:</span> <?=$user->getId()?><br />
+				<span>Псевдоним:</span> <?=$user->getName()?><br />
+				<span>Баланс:</span> <?=$user->getMoney()?> чат.<br />
+				<span>Статус:</span> <?=getUserGroup($user->getId())?><br />
+				<span>E-mail:</span> <?=$user->getEmail()?><br />
+				<span>Дата регистрации:</span> <?=$user->getReg_date()?><br />
+			</p>
+		</div>
+	</div>
+	<div id="table">
+		<p class="table_name">Статистика за неделю</p>
+		<table>
+			<tr><td>Станция</td><td>Воды выкачано</td></tr>
+			<tr><td>5-я категория</td><td>15000 гал.</td></tr>
+			<tr><td>4-я категория</td><td>0 гал.</td></tr>
+			<tr><td>3-я категория</td><td>0 гал.</td></tr>
+			<tr><td>2-я категория</td><td>0 гал.</td></tr>
+			<tr><td>1-я категория</td><td>0 гал.</td></tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+<div class="users_editor">
+	<div class="left_block">
+		<div class="avatar_change">
+			<div class="profile_avatar">
+				<img src="<?=GetUserAvatar($user_info["$db_aUsername"])?>" alt="profile avatar" />
+			</div>
+			<form method="post" action="">
+				<button name="avatar_change">Сменить</button>
+			</form>
+		</div>
+	</div>
+	<form id="user_info_edit" method="post" action="">
+		<div class="right_block">
+			<table>
+				<tr>
+					<td class="label"><p>ID:</p></td>
+					<td><p><?=$user_info["$db_aUserID"]?></p>
+						<input type="hidden" name="user_id" value="<?=$user_info["$db_aUserID"]?>"></td>
+				</tr>
+				<tr>
+					<td class="label"><label for="user_login">Логин:</label></td>
+					<td><input type="text" name="user_login" placeholder="Логин" value="<?=$user_info["$db_aUsername"]?>" /></td>
+				</tr>
+				<tr>
+					<td class="label"><label for="user_login">Пароль:</label></td>
+					<td><input type="text" name="user_password" placeholder="Пароль" /></td>
+				</tr>
+				<tr>
+					<td class="label"><label for="user_login">Группа:</label></td>
+					<td><?=$selectUserGroups?></td>
+				</tr>
+				<tr>
+					<td class="label"><label for="user_login">E-mail:</label></td>
+					<td><input type="text" name="user_email" placeholder="" value="<?=$user_info["$db_aEmail"]?>" /></td>
+				</tr>
+				<tr>
+					<td class="label"><label for="user_balance">Баланс:</label></td>
+					<td><input type="text" name="user_balance" placeholder="Кол-во чатлов" value="<?=$user_info["$db_bMoney"]?>" /></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
